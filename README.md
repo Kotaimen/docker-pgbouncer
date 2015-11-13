@@ -1,9 +1,6 @@
 # Pgbouncer Docker Image
 
-`pgbouncer` docker image
-    
-Mount a volume contains proper ```pgbouncer.ini`` and ``userlist.txt``` to
+``COPY`` configuration files into ``/etc/pgbouncer`` or just mount a volume::
 
-    /etc/pgbouncer/
-    
- 
+    docker run --rm -v <local_dir>:/etc/pgbouncer:ro pgbouncer
+
