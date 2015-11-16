@@ -1,6 +1,11 @@
 # Pgbouncer Docker Image
 
-``COPY`` configuration files into ``/etc/pgbouncer`` or just mount a volume::
+``COPY`` configuration files into ``/etc/pgbouncer`` or just mount configuration as volume::
 
-    docker run --rm -v <local_dir>:/etc/pgbouncer:ro pgbouncer
+    docker run -v <pgbouncer_config_dir>:/etc/pgbouncer:ro pgbouncer
 
+The default configuration file writes logs to::
+
+    /var/log/postgresql/
+    
+And listens on ``localhost:6432``.
