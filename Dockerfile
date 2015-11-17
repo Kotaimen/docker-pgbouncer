@@ -8,8 +8,7 @@ RUN         set -x \
             && apt-get install -yq --no-install-recommends pgbouncer \
             && apt-get purge -y --auto-remove
 
-WORKDIR     /etc/pgbouncer
+ADD         entrypoint.sh ./
 
 EXPOSE      6432
-ENTRYPOINT  ["pgbouncer"]
-CMD         ["-q", "-u", "postgres", "/etc/pgbouncer/pgbouncer.ini"]
+ENTRYPOINT  ["./entrypoint.sh"]
