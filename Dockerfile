@@ -6,7 +6,8 @@ ENV         DEBIAN_FRONTEND noninteractive
 RUN         set -x \
             && apt-get -qq update \
             && apt-get install -yq --no-install-recommends pgbouncer \
-            && apt-get purge -y --auto-remove
+            && apt-get purge -y --auto-remove \
+            && rm -rf /var/lib/apt/lists/*
 
 ADD         entrypoint.sh ./
 
