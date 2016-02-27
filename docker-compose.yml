@@ -1,5 +1,4 @@
 pgbouncer:
-#  image: kotaimen/pgbouncer
   build: .
   ports:
     - "6432:6432"
