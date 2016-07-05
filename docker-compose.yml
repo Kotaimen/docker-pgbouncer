@@ -3,6 +3,6 @@ pgbouncer:
   ports:
     - "6432:6432"
   volumes:
-    - ./pgbouncer:/etc/pgbouncer:ro
+    - ./etc/pgbouncer:/etc/pgbouncer:ro
     - ./log/postgresql:/var/log/postgresql:rw
   restart: always
