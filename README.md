@@ -1,25 +1,39 @@
-# Pgbouncer on Debian
+# Pgbouncer
 
-Uses out-of-box `pgbouncer` of `debian:jeessie`.
+PostgreSQL connection pooler.
+
+Simple out-of-box `pgbouncer` for debian.
 
 ## Tags
 
-- `latest`: [Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/develop/Dockerfile)
+- `latest`: Same as `debian` 
+- `debian`: `pgbouncer-1.5.4` on `debian:jessie` (Dockerfile)
 
 [![](https://badge.imagelayers.io/kotaimen/pgbouncer:latest.svg)](https://imagelayers.io/?images=kotaimen/pgbouncer:latest 'Get your own badge on imagelayers.io')
 
 ## Usage
 
-Mount your configurations as a volume:
+Mount your configuration directory as a volume:
 
     docker run -v <pgbouncer_config_dir>:/etc/pgbouncer:ro pgbouncer
 
-The default Debian config file writes logs to:
+You can use [supplied config files](https://github.com/Kotaimen/docker-pgbouncer/tree/develop/pgbouncer), which are copied from a fresh debian installation.  Also check pgbouncer's official [config file documentation](https://pgbouncer.github.io/config.html).
+
+By default, pgbouncer writes logs to:
 
     /var/log/postgresql/
     
-And listens to:
+And listens on:
 
     0.0.0.0:6432
 
-A sample [docker-compose.yml](https://github.com/Kotaimen/docker-pgbouncer/blob/develop/docker-compose.yml) is also provided.
+Docker-compose:
+    
+    pgbouncer:
+      image: kotaimen/pgbouncer
+      ports:
+        - "6432:6432"
+      volumes:
+        - ./etc/pgbouncer:/etc/pgbouncer:ro
+        - ./log/postgresql:/var/log/postgresql:rw
+      restart: always
