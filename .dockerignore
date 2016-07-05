@@ -1,3 +1,6 @@
 .git/
+.gitignore
 README.md
-pgbouncer/
+LICENSE
+etc/
+docker-compose.yml
