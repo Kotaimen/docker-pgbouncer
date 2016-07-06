@@ -1,4 +1,4 @@
-FROM        debian:jessie
+FROM        ubuntu:trusty
 MAINTAINER  Kotaimen <kotaimen.c@gmail.com>
 
 ENV         DEBIAN_FRONTEND noninteractive

@@ -8,6 +8,7 @@ Simple out-of-box `pgbouncer` for debian.
 
 - `latest`: Same as `debian-jessie`.
 - `debian-jessie`: `pgbouncer-1.5.4` on `debian:jessie` ([Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/debian-jessie/Dockerfile))
+- `ubuntu-trusty`: `pgbouncer-1.5.4` on `ubuntu:trusty` (`14.04LTS`) ([Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/ubuntu-trusty/Dockerfile))
 
 [![](https://badge.imagelayers.io/kotaimen/pgbouncer:latest.svg)](https://imagelayers.io/?images=kotaimen/pgbouncer:latest 'Get your own badge on imagelayers.io')
 
