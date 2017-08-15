@@ -1,4 +1,4 @@
-FROM        debian:jessie
+FROM        debian:stretch
 MAINTAINER  Kotaimen <kotaimen.c@gmail.com>
 
 ENV         DEBIAN_FRONTEND noninteractive

@@ -8,9 +8,9 @@ Simple out-of-box `pgbouncer` for debian.
 
 - `latest`: Same as `debian-jessie`.
 - `debian-jessie`: `pgbouncer-1.5.4` on `debian:jessie` ([Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/debian-jessie/Dockerfile))
-
-[![](https://badge.imagelayers.io/kotaimen/pgbouncer:latest.svg)](https://imagelayers.io/?images=kotaimen/pgbouncer:latest 'Get your own badge on imagelayers.io')
-
+- `debian-stretch`: `pgbouncer-1.7.2` on `debian:stretch` ([Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/debian-stretch/Dockerfile))
+- `ubuntu-trusty`: `pgbouncer-1.5.4` on `ubuntu:trusty` (`14.04LTS`) ([Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/ubuntu-trusty/Dockerfile))
+- `ubuntu-xenial`: `pgbouncer-1.7` on `ubuntu:xenial` (`16.04LTS`) ([Dockerfile](https://github.com/Kotaimen/docker-pgbouncer/blob/ubuntu-xenial/Dockerfile))
 ## Usage
 
 Mount your configuration directory as a volume:
