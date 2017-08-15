@@ -1,8 +1,13 @@
-pgbouncer:
-  build: .
-  ports:
-    - "6432:6432"
-  volumes:
-    - ./etc/pgbouncer:/etc/pgbouncer:ro
-    - ./log/postgresql:/var/log/postgresql:rw
-  restart: always
+version: '2'
+
+services:
+
+  pgbouncer:
+    build:
+      context: .
+    ports:
+      - "6432:6432"
+    volumes:
+      - ./etc/pgbouncer:/etc/pgbouncer:ro
+      - ./log/postgresql:/var/log/postgresql:rw
+    restart: always
