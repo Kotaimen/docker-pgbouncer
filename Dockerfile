@@ -1,4 +1,4 @@
-FROM        ubuntu:trusty
+FROM        ubuntu:xenial
 MAINTAINER  Kotaimen <kotaimen.c@gmail.com>
 
 ENV         DEBIAN_FRONTEND noninteractive
