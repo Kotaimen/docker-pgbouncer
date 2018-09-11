@@ -1,0 +1,4 @@
+#!groovy
+node {
+    StandardBuild()
+}
